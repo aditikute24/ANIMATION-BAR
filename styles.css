@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(210deg, #0c0c1ea3, hsla(0, 100%, 50%, 0.463));
+}
+.navbar {
+  position: relative;
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  background: rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar ul {
+  list-style: none;
+  display: inline-block;
+  z-index: 1;
+  cursor: pointer;
+}
+.navbar li {
+  display: inline-block;
+  padding: 0 15px;
+  text-align: center;
+  z-index: 10;
+  transition: transform 300ms ease;
+}
+a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(107, 171, 74), rgb(17, 21, 13));
+  border-radius: 10px;
+  transition: all 500ms ease 0s;
+}
+
+li:nth-child(1):hover ~ .bg {
+  width: 100px;
+  left: 0;
+}
+
+li:nth-child(2):hover ~ .bg {
+  width: 90px;
+  left: 95px;
+}
+
+li:nth-child(3):hover ~ .bg {
+  width: 110px;
+  left: 190px;
+}
+
+li:nth-child(4):hover ~ .bg {
+  width: 90px;
+  left: 300px;
+}
+
+li:nth-child(5):hover ~ .bg {
+  width: 110px;
+  left: 390px;
+}
+
+li:hover {
+  transform: scalex(1.09);
+  transition: transform 300ms ease;
+}
